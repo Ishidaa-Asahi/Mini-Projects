@@ -36,7 +36,46 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                //int number1 = ;
+                float number1 = Float.parseFloat(num1.getText().toString());
+                float number2 = Float.parseFloat(num2.getText().toString());
+                float sum = number1 + number2;
+                answer.setText("Answer: "+String.valueOf(sum));
+            }
+        });
+
+        sub.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                float number1 = Float.parseFloat(num1.getText().toString());
+                float number2 = Float.parseFloat(num2.getText().toString());
+                float difference = number1 - number2;
+                answer.setText("Answer: "+String.valueOf(difference));
+            }
+        });
+
+        mul.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                float number1 = Float.parseFloat(num1.getText().toString());
+                float number2 = Float.parseFloat(num2.getText().toString());
+                float product = number1 * number2;
+                answer.setText("Answer: "+String.valueOf(product));
+            }
+        });
+
+        div.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                float number1 = Float.parseFloat(num1.getText().toString());
+                float number2 = Float.parseFloat(num2.getText().toString());
+                float quotient = number1 / number2;
+                answer.setText("Answer: "+String.valueOf(quotient));
             }
         });
     }
